@@ -5,7 +5,7 @@
   * Managing the development process
 
 #### Summary
-You can choose whomever you would like to work with for this challenge. You should work by yourself.
+You should work by yourself.
 
 Day 1 of phase 2 is the first day you can and should start working on your passion project. By Week 6 Wednesday, you should have reached MVP for your passion project. What you present and produce is considered in moving into phase 3. It is part of your overall assessment of how much you learned in phase 2.
 
