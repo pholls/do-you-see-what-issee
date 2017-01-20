@@ -1,0 +1,3 @@
+Position.new()
+
+Photo.new()
