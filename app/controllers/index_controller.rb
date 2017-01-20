@@ -18,6 +18,7 @@ end
 # END IF
 # THEN Query Google Maps API for Satellite image that corresponds to the latitude
 # and longitude of the ISS.
+# https://developers.google.com/maps/documentation/static-maps/
 # Save to the DB.
 
 # SCHEMA:
