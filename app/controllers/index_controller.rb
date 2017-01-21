@@ -8,12 +8,17 @@ get '/' do
   erb :index, locals: {:url => Photo.last.url, position: Position.last}
 end
 
+
 iss_view_file = Tempfile.new('iss-view')
-open(iss_view_file.path, "wb") do |file|
-  open(iss_view_url(42.000,42.000)) do |content|
-    file.write(content)
+
+def refresh_img(iss_view_file)
+  open(iss_view_file.path, "wb") do |file|
+    open(iss_view_url(42.000,42.000)) do |content|
+      file.write(content)
+    end
   end
 end
+
 
 get '/lake' do
   p iss_view_file
