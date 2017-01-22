@@ -5,12 +5,13 @@
 }
 
 h1 {
+  padding-top: 10px;
   display: block;
   margin: 0 auto;
   text-align: center;
 }
 
-p#description, #coordinates {
+p#description, #coordinates, #location {
   text-align: center;
 }
 
