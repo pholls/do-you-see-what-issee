@@ -1,17 +1,17 @@
 <h1>Do You See What ISSee?</h1>
-<p>Current view from the International Space Station</p>
+<p id='description'>Current view from the International Space Station</p>
 <div class='image-container'>
   <img id='iss-view' src=''>
   <p>
-  The ISS's current coordinates are:
+  The ISS's coordinates right now are:
   <div id='coordinates'></div>
-  <%#= Position.get.latitude %> <%#= Position.get.longitude %>
   </p>
-  <!-- <p>It is currently orbiting directly above:</p> -->
+  <!-- <p>It is currently orbiting above:</p>
+  <div id='location'></div> -->
   <!-- Hit another API for location name, given coordinates -->
 </div>
 <p class="info">This page updates every ten seconds with a high-resolution satellite image of
-the coordinates beneath the International Space Station.</p>
+the area beneath the International Space Station.</p>
 <script type="text/javascript">
   var live = true;
   var interval = 10000;
@@ -25,10 +25,16 @@ the coordinates beneath the International Space Station.</p>
       updateCoordinates(latitude, longitude);
     })
   function updateCoordinates(latitude, longitude) {
-    $('#coordinates').text(latitude + ',' + longitude);
+    $('#coordinates').text(latitude + ', ' + longitude);
   }
-    if(live){
-       setTimeout(updateISSView, interval);
+  // function getAddress(latitude, longitude) {
+  //   var url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&key=' + "<#%= ENV['GOOGLE_MAPS_API_KEY'] %>";
+  //   $.get(url).done(function(data) {
+  //     $('#location').text(data['results'][5]['short-name']);
+  //   })
+  // }
+  if(live){
+      setTimeout(updateISSView, interval);
     }
   }
 

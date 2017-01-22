@@ -1,0 +1,31 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+  background-color: black;
+  color: gray;
+}
+
+h1 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+p#description, #coordinates {
+  text-align: center;
+}
+
+.image-container {
+  width: 640px;
+  display: block;
+  margin: 0 auto;
+}
+
+.info {
+  font-size: 65%;
+  padding-top: 100px;
+}
+
+#iss-view {
+  border: 1px solid gray;
+  border-radius: 5%;
+}
