@@ -6,8 +6,8 @@
   The ISS's coordinates right now are:
   <div id='coordinates'></div>
   </p>
-  <!-- <p>It is currently orbiting above:</p>
-  <div id='location'></div> -->
+  <p>It is currently orbiting above:</p>
+  <div id='location'></div>
   <!-- Hit another API for location name, given coordinates -->
 </div>
 <p class="info">This page updates every ten seconds with a high-resolution satellite image of
@@ -23,16 +23,17 @@ the area beneath the International Space Station.</p>
       var url = "https://maps.googleapis.com/maps/api/staticmap?maptype=satellite&center=" + latitude + ',' + longitude + "&zoom=8&size=640x400&key=" + "<%= ENV['GOOGLE_MAPS_API_KEY'] %>";
       $image.attr('src', url);
       updateCoordinates(latitude, longitude);
+      getAddress(latitude, longitude);
     })
   function updateCoordinates(latitude, longitude) {
     $('#coordinates').text(latitude + ', ' + longitude);
   }
-  // function getAddress(latitude, longitude) {
-  //   var url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&key=' + "<#%= ENV['GOOGLE_MAPS_API_KEY'] %>";
-  //   $.get(url).done(function(data) {
-  //     $('#location').text(data['results'][5]['short-name']);
-  //   })
-  // }
+  function getAddress(latitude, longitude) {
+    var url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&key=' + "<%= ENV['GOOGLE_MAPS_API_KEY'] %>";
+    $.get(url).done(function(data) {
+      $('#location').text(data['results'][1]['formatted_address']);
+    })
+  }
   if(live){
       setTimeout(updateISSView, interval);
     }

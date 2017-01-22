@@ -19,7 +19,7 @@ end
 # end
 
 
-# get '/lake' do
+# get '/tempfile' do
 #   p iss_view_file
 #   p iss_view_file.path
 
