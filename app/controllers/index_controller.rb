@@ -1,12 +1,12 @@
 require 'tempfile'
 
-# def iss_view_url(latitude, longitude)
-#   'https://maps.googleapis.com/maps/api/staticmap?maptype=satellite&center=42.000,42.000&zoom=8&size=640x400&key=' + ENV['GOOGLE_MAPS_API_KEY']
-# end
-
 get '/' do
   erb :index
 end
+
+# def iss_view_url(latitude, longitude)
+#   'https://maps.googleapis.com/maps/api/staticmap?maptype=satellite&center=42.000,42.000&zoom=8&size=640x400&key=' + ENV['GOOGLE_MAPS_API_KEY']
+# end
 
 # iss_view_file = Tempfile.new('iss-view')
 
