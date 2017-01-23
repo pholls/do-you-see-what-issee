@@ -7,7 +7,7 @@ $(document).ready(function() {
       var $image = $('#iss-view');
       var latitude = data["iss_position"]['latitude'];
       var longitude = data["iss_position"]['longitude'];
-      var url = "https://maps.googleapis.com/maps/api/staticmap?maptype=satellite&center=" + latitude + ',' + longitude + "&zoom=6&size=640x400&key=";
+      var url = "https://maps.googleapis.com/maps/api/staticmap?maptype=satellite&center=" + latitude + ',' + longitude + "&zoom=6&size=640x400&key=AIzaSyAhd-kB5Tg-nLFkfutBy0CBy0-uUH9RyIU";
       $image.attr('src', url);
       updateCoordinates(latitude, longitude);
       getAddress(latitude, longitude);
@@ -18,7 +18,7 @@ $(document).ready(function() {
   }
 
   function getAddress(latitude, longitude) {
-    var url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&key=';
+    var url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&key=AIzaSyAhd-kB5Tg-nLFkfutBy0CBy0-uUH9RyIU';
     $.get(url).done(function(data) {
       if(data['status'] === 'ZERO_RESULTS'){
         $('.location-p-tag').remove();
