@@ -3,11 +3,11 @@ $(document).ready(function() {
   var interval = 10000;
   
   function updateISSView() {
-    $.get('http://api.open-notify.org/iss-now.json').done(function(data) {
+    $.get('https://api.open-notify.org/iss-now.json').done(function(data) {
       var $image = $('#iss-view');
       var latitude = data["iss_position"]['latitude'];
       var longitude = data["iss_position"]['longitude'];
-      var url = "https://maps.googleapis.com/maps/api/staticmap?maptype=satellite&center=" + latitude + ',' + longitude + "&zoom=6&size=640x400&key=" + 'AIzaSyAhd-kB5Tg-nLFkfutBy0CBy0-uUH9RyIU';
+      var url = "https://maps.googleapis.com/maps/api/staticmap?maptype=satellite&center=" + latitude + ',' + longitude + "&zoom=6&size=640x400&key=";
       $image.attr('src', url);
       updateCoordinates(latitude, longitude);
       getAddress(latitude, longitude);
