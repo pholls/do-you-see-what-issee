@@ -18,7 +18,7 @@ $(document).ready(function() {
   }
 
   function getAddress(latitude, longitude) {
-    var url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&key=AIzaSyAhd-kB5Tg-nLFkfutBy0CBy0-uUH9RyIU';
+    var url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&key=AIzaSyCezEF8KJ4OIcIf03athP_OprYXouGTk-s';
     $.get(url).done(function(data) {
       if(data['status'] === 'ZERO_RESULTS'){
         $('.location-p-tag').remove();
