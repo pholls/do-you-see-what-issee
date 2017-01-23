@@ -3,7 +3,7 @@ $(document).ready(function() {
   var interval = 10000;
   
   function updateISSView() {
-    $.get('https://api.open-notify.org/iss-now.json').done(function(data) {
+    $.get('http://api.open-notify.org/iss-now.json').done(function(data) {
       var $image = $('#iss-view');
       var latitude = data["iss_position"]['latitude'];
       var longitude = data["iss_position"]['longitude'];
