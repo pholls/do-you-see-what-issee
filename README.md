@@ -1,6 +1,6 @@
 # Do You See What ISSee?
 
-This page updates every ten seconds with a high-resolution satellite image of the area currently beneath the International Space Station, to simulate viewing the Earth from the ISS. When possible, it also retrieves the general address (town, state/province, and country) beneath the ISS.
+**Do You See What ISSee?** is a web application that updates every ten seconds with a high-resolution satellite image of the area currently beneath the International Space Station, to simulate viewing the Earth from the ISS. When possible, it also retrieves the general address (town, state/province, and country) beneath the ISS.
 
 Check out the deployed app on [Heroku](http://doyouseewhatissee.herokuapp.com/).
 
@@ -12,8 +12,10 @@ This project was created by [Pat Holland](https://github.com/pholls/) as a solo 
 
 This is a Sinatra app that uses two APIs to determine the coordinates of the current position of the International Space Station and display a satellite image and general address of that location.
 
+* Sinatra
 * JavaScript
+    * hit the APIs and update the page with the information
 * [Open Notify API](https://open-notify.org/)
-    * ISS coordinates
+    * retrieve ISS coordinates
 * [Google Maps API](https://developers.google.com/maps/)
-    * Satellite image and rough location description
+    * retrieve satellite image and rough location description
