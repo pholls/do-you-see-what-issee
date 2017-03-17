@@ -1,6 +1,7 @@
-* {
+body {
   font-family: 'Open Sans', sans-serif;
-  background-color: black;
+  background: #000000 url("https://upload.wikimedia.org/wikipedia/commons/0/09/Night_stars_berlin.png");
+  background-size: 1280px 800px;
   color: gray;
 }
 
@@ -11,10 +12,6 @@ h1 {
   text-align: center;
 }
 
-p#description, #coordinates, #location {
-  text-align: center;
-}
-
 .image-container {
   width: 640px;
   display: block;
@@ -22,8 +19,27 @@ p#description, #coordinates, #location {
 }
 
 .info {
-  font-size: 65%;
+  font-size: 75%;
   padding-top: 100px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.attrib {
+  padding-top: 20px;
+  font-size: 60%;
+}
+
+a {
+  color: #b3b3b3;
+}
+
+a:hover, :visited {
+  text-decoration: none;
+}
+
+p#description, #coordinates, #location {
+  text-align: center;
 }
 
 #iss-view {
